@@ -1,16 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+// import ReactDOM from 'react-dom'; // react17 以下
+import { createRoot } from 'react-dom/client'; // react18 以上
+
 import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// react17 以下
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+
+// react18 以上
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(<App />);
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
