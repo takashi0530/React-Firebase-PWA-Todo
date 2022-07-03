@@ -1,12 +1,8 @@
-import React, { useContext, useState } from "react";
-import dig from "object-dig";
-
+import React, { useContext } from "react";
+// import dig from "object-dig";
 // メモ) importの際、 export default の場合は{}かっこがいらないが、ひとつのfirebaseファイルから複数の関数をエクスポートする場合は、{}かっこがいる
-import { signInWithGoogle, logOut } from "../service/firebase";
-
+// import { signInWithGoogle, logOut } from "../service/firebase";
 import { AuthContext } from "../providers/AuthProvider";
-
-console.log('いいい');
 
 // 関数型コンポーネント
 const Header = () => {
@@ -16,16 +12,16 @@ const Header = () => {
 
 
     const buttonRender = () => {
-        let buttonDom
+        // let buttonDom;
 
-        // ログインしている場合
-        if ( dig(currentUser, 'currentUser')) {
-            buttonDom = <button onClick={logOut}>ログアウト</button>
-        // ログインしていない場合
-        } else {
-            buttonDom = <button onClick={signInWithGoogle}>ログイン</button>
-        }
-        return buttonDom;
+        // // ログインしている場合
+        // if ( dig(currentUser, 'currentUser', 'uid')) {
+        //     buttonDom = <button onClick={logOut}>ログアウト</button>
+        // // ログインしていない場合
+        // } else {
+        //     buttonDom = <button onClick={signInWithGoogle}>ログイン</button>
+        // }
+        // return buttonDom;
 
     };
 

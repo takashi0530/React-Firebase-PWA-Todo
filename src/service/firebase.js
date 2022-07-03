@@ -15,6 +15,7 @@ firebase.initializeApp({
 
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 export const auth = firebase.auth();
+export const db = firebase.firestore();
 
 // Hedaer.jsで signInWithGoogle という関数を使用できるようにエクスポート宣言する
 export const signInWithGoogle = () => {

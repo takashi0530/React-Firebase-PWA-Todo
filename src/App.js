@@ -4,16 +4,21 @@ import './App.css';
 import './service/firebase';
 // ヘッダーコンポーネントのインポート
 import Header from './components/Header';
-
+import Dashboard from './components/Dashboard';
 
 function App() {
 
   return (
 
     <AuthProvider>
+
+        {/* ヘッダーを表示するコンポーネント */}
         <Header />
+
         {/* TODOを表示するコンポーネント */}
-        {/* フッター */}
+        <Dashboard />
+
+        {/* フッターを表示するコンポーネント */}
     </AuthProvider>
 
   );
