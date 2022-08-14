@@ -38,3 +38,17 @@ export const addTodo = (content, uid) => {
 export const todoDelete = (id) => {
     db.collection('todo').doc(id).delete();
 };
+
+export const toggleComple = async ( id ) => {
+    const todo = await db.collection("todo").doc(id).get();
+    return db.collection("todo").doc(id).update({
+      // もしチェックされたTOdoが未完了 →  isCompleteをtrue
+      // もしチェックされたTOdoが完了 →  isCompleteをfalse
+      // if(todo.data().isComplete){
+      //   false
+      // }else{
+      //   true
+      // }
+        isComplete: todo.data().isComplete ? false : true,
+      });
+  }

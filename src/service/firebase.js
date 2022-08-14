@@ -16,6 +16,7 @@ firebase.initializeApp({
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 export const auth = firebase.auth();
 export const db = firebase.firestore();
+db.enablePersistence(); // 初期化のタイミングで永続化される オフラインでもTODOを見れる
 
 // Hedaer.jsで signInWithGoogle という関数を使用できるようにエクスポート宣言する
 export const signInWithGoogle = () => {
