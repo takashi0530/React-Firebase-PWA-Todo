@@ -1,12 +1,13 @@
-import React, {useState, useEffect, useContext} from "react";
+import React from "react";
+// import {useState, useEffect, useContext} from "react";
 import { ListItem, ListItemIcon, ListItemText, ListItemSecondaryAction, IconButton, Checkbox } from "@material-ui/core";
 import DeleteIcon from '@material-ui/icons/Delete';
 import { makeStyles } from "@material-ui/core";
 // api.jsでexportしているものをすべてimportする、という意味
 import * as Api from "../service/api"
-import { signInWithGoogle } from "../service/firebase";
-import dig from "object-dig"
-import { AuthContext } from "../providers/AuthProvider";
+// import { signInWithGoogle } from "../service/firebase";
+// import dig from "object-dig"
+// import { AuthContext } from "../providers/AuthProvider";
 
 // import { signInWithGoogle, logOut } from "../service/firebase";
 // import dig from "object-dig";
